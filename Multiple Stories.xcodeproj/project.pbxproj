@@ -15,6 +15,10 @@
 		C46850AA26C468C800332B8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C468508626C468C600332B8C /* ContentView.swift */; };
 		C46850AB26C468C800332B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C468508726C468C800332B8C /* Assets.xcassets */; };
 		C46850AC26C468C800332B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C468508726C468C800332B8C /* Assets.xcassets */; };
+		C46850BF26C469E800332B8C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46850BE26C469E800332B8C /* Home.swift */; };
+		C46850C126C46BA700332B8C /* StoryBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46850C026C46BA700332B8C /* StoryBundle.swift */; };
+		C46850C326C46C8C00332B8C /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46850C226C46C8C00332B8C /* StoryViewModel.swift */; };
+		C46850C526C46FBA00332B8C /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46850C426C46FBA00332B8C /* StoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		C468509B26C468C800332B8C /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		C46850A126C468C800332B8C /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46850A526C468C800332B8C /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		C46850BE26C469E800332B8C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		C46850C026C46BA700332B8C /* StoryBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBundle.swift; sourceTree = "<group>"; };
+		C46850C226C46C8C00332B8C /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
+		C46850C426C46FBA00332B8C /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,9 @@
 		C468508426C468C600332B8C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C46850BD26C469D300332B8C /* ViewModel */,
+				C46850BC26C469C400332B8C /* Model */,
+				C46850BB26C469AE00332B8C /* View */,
 				C468508526C468C600332B8C /* Multiple_StoriesApp.swift */,
 				C468508626C468C600332B8C /* ContentView.swift */,
 				C468508726C468C800332B8C /* Assets.xcassets */,
@@ -123,6 +134,31 @@
 				C46850A526C468C800332B8C /* Tests_macOS.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		C46850BB26C469AE00332B8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C46850BE26C469E800332B8C /* Home.swift */,
+				C46850C426C46FBA00332B8C /* StoryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C46850BC26C469C400332B8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C46850C026C46BA700332B8C /* StoryBundle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C46850BD26C469D300332B8C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C46850C226C46C8C00332B8C /* StoryViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,8 +319,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46850C526C46FBA00332B8C /* StoryView.swift in Sources */,
 				C46850A926C468C800332B8C /* ContentView.swift in Sources */,
+				C46850BF26C469E800332B8C /* Home.swift in Sources */,
 				C46850A726C468C800332B8C /* Multiple_StoriesApp.swift in Sources */,
+				C46850C326C46C8C00332B8C /* StoryViewModel.swift in Sources */,
+				C46850C126C46BA700332B8C /* StoryBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +495,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,7 +525,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
